@@ -1,0 +1,39 @@
+workspace(name = "pose_classification")
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "opencv",
+    url = "https://github.com/opencv/opencv/archive/4.5.2.zip",
+    strip_prefix = "opencv-4.5.2",
+    sha256 = "828f7b0d6aa17d74e4f1f60132fcf5769dc80a1a56f926663f88b4e2e3f5a7bc",
+)
+
+http_archive(
+    name = "mediapipe",
+    url = "https://github.com/google/mediapipe/archive/v0.8.6.zip",
+    strip_prefix = "mediapipe-0.8.6",
+    sha256 = "fd5a5e4f1b78c2a7f73b89776c7d5950b3b82a9465d8566b2efb1b2ec0b11f47",
+)
+
+http_archive(
+    name = "protobuf_archive",
+    url = "https://github.com/protocolbuffers/protobuf/archive/v3.14.0.zip",
+    strip_prefix = "protobuf-3.14.0",
+    sha256 = "bf0e5070b4b99240183b29df78155eee335885e53a8af8683964579c214ad301",
+)
+
+http_archive(
+    name = "zlib",
+    urls = ["https://zlib.net/zlib-1.3.1.tar.gz"],
+    sha256 = "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23",
+    strip_prefix = "zlib-1.3.1",
+)
+
+
+"""http_archive(
+    name = "zlib",
+    urls = ["https://zlib.net/zlib-1.3.1.tar.gz"],
+    sha256 = "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23",
+    strip_prefix = "zlib-1.3.1",
+)"""
